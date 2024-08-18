@@ -1,73 +1,85 @@
-import json
+import time
 import logging
+from logging_config import setup_logging
 from vector_store import VectorStore
 from embedding import EmbeddingModel
 from llm_interface import OllamaProvider
+from data_preprocessing import preprocess_roadmap_output
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+logger = setup_logging()
 
 
+def timeit(method):
+    def timed(*args, **kw):
+        ts = time.time()
+        result = method(*args, **kw)
+        te = time.time()
+        logger.info(f"{method.__name__} took {te - ts:.2f} seconds")
+        return result
+
+    return timed
+
+
+@timeit
 def load_vector_store(file_path):
     return VectorStore.load(file_path)
 
 
-def prepare_user_data(data):
-    return "\n".join([f"{k}: {v}" for k, v in data.items()])
+@timeit
+def embed_user_data(embedding_model, user_data):
+    return embedding_model.embed(user_data)
 
 
-def get_user_social_security_data(file_path):
-    with open(file_path, "r", encoding="utf-8-sig") as f:
-        data = json.load(f)
-    return data
+@timeit
+def search_relevant_rules(vector_store, user_vector):
+    return vector_store.search(user_vector)
 
 
-"""def get_user_social_security_data():
-    # Mock function to return some sample user data
-    return {"name": "John Doe", "age": 62, "years_worked": 35, "average_salary": 50000}
-        """
+@timeit
+def analyze_with_llm(llm, query, context):
+    return llm.analyze(query, context)
 
 
 def main():
-    # Initialize components
-    logger.debug("starting main function")
-    logger.debug("initializing embedding model")
+    logger.info("Starting main function")
+
     embedding_model = EmbeddingModel()
+    try:
+        vector_store = load_vector_store("rules_vector_store")
+    except FileNotFoundError as e:
+        logger.error(f"Error loading vector store: {e}")
+        return
 
-    logger.debug("loading vector store rules")
-    vector_store = load_vector_store("rules_vector_store")
-
-    logger.debug("initializing ollama")
     llm = OllamaProvider()
 
-    # Get user data
-    logger.debug("getting mocked user data")
-    user_data = get_user_social_security_data("sandy_sample.json")
+    # Preprocess Sandy Sample data
+    try:
+        user_data = preprocess_roadmap_output("sandy_sample.json")
+    except Exception as e:
+        logger.error(f"Error preprocessing user data: {e}")
+        return
 
-    logger.debug(user_data)
-    # Embed user data and retrieve relevant rules
-    logger.debug("creating user vector")
-    user_vector = embedding_model.embed(prepare_user_data(user_data))
-    logger.debug("finding relevant rules")
-    relevant_rules = vector_store.search(user_vector)
-    logger.debug(relevant_rules)
+    user_vector = embed_user_data(embedding_model, user_data)
+    relevant_rules = search_relevant_rules(vector_store, user_vector)
 
-    # Analyze with LLM
-    logger.debug("defining context")
-    context = (
-        f"User Data:\n{prepare_user_data(user_data)}\n\nRelevant Rules:\n"
-        + "\n\n".join(relevant_rules)
+    context = f"User Data:\n{user_data}\n\nRelevant Rules:\n" + "\n\n".join(
+        relevant_rules
     )
-    query = "Analyze this user's social security situation based on the provided rules."
-    logger.debug("analyzing output")
-    analysis_result = llm.analyze(query, context)
+    query = """
+    Based on the provided user data for both the primary beneficiary and spouse, and the relevant Social Security rules, please provide:
+    1. A summary of both individuals' work history and earnings.
+    2. An analysis of their estimated Social Security benefits, including any spousal benefits they might be eligible for.
+    3. Recommendations for optimizing their Social Security benefits as a couple.
+    4. Any additional insights or considerations based on their specific situation, including the age difference between the spouses and their respective earnings histories.
+    5. Note any specific rules that you are referencing in your analysis.
+    """
 
-    # Output results
-    logger.debug("print results to stdout")
-    print("User Data:")
-    print(json.dumps(user_data, indent=2))
-    print("\nAnalysis Results:")
+    analysis_result = analyze_with_llm(llm, query, context)
+
+    print("Analysis Results:")
     print(analysis_result)
+
+    logger.info("Main function completed")
 
 
 if __name__ == "__main__":

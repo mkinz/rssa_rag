@@ -1,3 +1,4 @@
+import os
 from annoy import AnnoyIndex
 import json
 
@@ -38,15 +39,24 @@ class VectorStore:
 
     @classmethod
     def load(cls, file_path):
+        # check if files exist
+        ann_file = f"{file_path}.ann"
+        json_file = f"{file_path}.json"
+
+        if not os.path.exists(ann_file) or not os.path.exists(json_file):
+            raise FileNotFoundError(
+                f"Vector store files not found: {ann_file} or {json_file}"
+            )
+
         # Load the metadata
-        with open(f"{file_path}.json", "r") as f:
+        with open(f"{json_file}", "r") as f:
             metadata = json.load(f)
 
         # Create a new VectorStore instance
         vector_store = cls(metadata["dimension"])
 
         # Load the Annoy index
-        vector_store.index.load(f"{file_path}.ann")
+        vector_store.index.load(f"{ann_file}")
 
         # Restore the metadata
         vector_store.id_to_text = metadata["id_to_text"]

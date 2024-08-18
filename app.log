@@ -1,0 +1,70 @@
+2024-08-18 12:47:55,970 - root - INFO - Starting main function
+2024-08-18 12:47:55,970 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 12:47:56,337 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 12:51:31,123 - root - INFO - Starting main function
+2024-08-18 12:51:31,123 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 12:51:31,323 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:07:07,982 - root - INFO - Starting main function
+2024-08-18 13:07:07,982 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:07:08,218 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:07:08,218 - root - ERROR - error loading vector store: [Errno 2] No such file or directory: 'rules_vector_store'
+2024-08-18 13:07:43,772 - root - INFO - Starting main function
+2024-08-18 13:07:43,772 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:07:43,972 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:07:43,972 - root - ERROR - error loading vector store: [Errno 2] No such file or directory: 'rules_vector_store'
+2024-08-18 13:13:13,166 - root - INFO - Starting main function
+2024-08-18 13:13:13,166 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:13:13,368 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:13:13,369 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:15:37,375 - root - INFO - Starting main function
+2024-08-18 13:15:37,375 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:15:37,575 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:15:37,575 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:18:04,262 - root - INFO - Starting main function
+2024-08-18 13:18:04,262 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:18:04,465 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:18:04,465 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:19:28,163 - root - INFO - Starting main function
+2024-08-18 13:19:28,163 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:19:28,365 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:19:28,365 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:23:32,325 - root - INFO - Starting main function
+2024-08-18 13:23:32,325 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:23:32,578 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:23:32,578 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:23:32,795 - root - INFO - embed_user_data took 0.22 seconds
+2024-08-18 13:23:32,795 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-18 13:23:32,801 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-18 13:24:11,079 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-18 13:24:11,083 - root - INFO - analyze_with_llm took 38.29 seconds
+2024-08-18 13:24:11,083 - root - INFO - Main function completed
+2024-08-18 13:25:18,750 - root - INFO - Starting main function
+2024-08-18 13:25:18,751 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:25:19,101 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:25:19,101 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:25:19,347 - root - INFO - embed_user_data took 0.24 seconds
+2024-08-18 13:25:19,347 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-18 13:25:19,352 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-18 13:26:08,049 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-18 13:26:08,051 - root - INFO - analyze_with_llm took 48.70 seconds
+2024-08-18 13:26:08,051 - root - INFO - Main function completed
+2024-08-18 13:27:17,536 - root - INFO - Starting main function
+2024-08-18 13:27:17,536 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:27:17,882 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:27:17,882 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:27:18,013 - root - INFO - embed_user_data took 0.13 seconds
+2024-08-18 13:27:18,013 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-18 13:27:18,019 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-18 13:28:01,631 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-18 13:28:01,632 - root - INFO - analyze_with_llm took 43.62 seconds
+2024-08-18 13:28:01,632 - root - INFO - Main function completed
+2024-08-18 13:29:48,316 - root - INFO - Starting main function
+2024-08-18 13:29:48,316 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:29:48,532 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:29:48,533 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:29:48,660 - root - INFO - embed_user_data took 0.13 seconds
+2024-08-18 13:29:48,660 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-18 13:29:48,666 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-18 13:30:25,829 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-18 13:30:25,831 - root - INFO - analyze_with_llm took 37.17 seconds
+2024-08-18 13:30:25,831 - root - INFO - Main function completed
