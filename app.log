@@ -68,3 +68,23 @@
 2024-08-18 13:30:25,829 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
 2024-08-18 13:30:25,831 - root - INFO - analyze_with_llm took 37.17 seconds
 2024-08-18 13:30:25,831 - root - INFO - Main function completed
+2024-08-18 13:37:34,484 - root - INFO - Starting main function
+2024-08-18 13:37:34,484 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:37:34,690 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:37:34,690 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:37:34,794 - root - INFO - embed_user_data took 0.10 seconds
+2024-08-18 13:37:34,794 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-18 13:37:34,799 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-18 13:38:19,672 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-18 13:38:19,673 - root - INFO - analyze_with_llm took 44.88 seconds
+2024-08-18 13:38:19,673 - root - INFO - Main function completed
+2024-08-18 13:50:03,393 - root - INFO - Starting main function
+2024-08-18 13:50:03,393 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-18 13:50:03,626 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-18 13:50:03,626 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-18 13:50:03,732 - root - INFO - embed_user_data took 0.10 seconds
+2024-08-18 13:50:03,732 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-18 13:50:03,738 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-18 13:50:37,612 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-18 13:50:37,612 - root - INFO - analyze_with_llm took 33.88 seconds
+2024-08-18 13:50:37,613 - root - INFO - Main function completed

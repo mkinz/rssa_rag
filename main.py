@@ -1,5 +1,4 @@
 import time
-import logging
 from logging_config import setup_logging
 from vector_store import VectorStore
 from embedding import EmbeddingModel
