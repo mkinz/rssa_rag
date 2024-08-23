@@ -2,7 +2,7 @@ import time
 from logging_config import setup_logging
 from vector_store import VectorStore
 from embedding import EmbeddingModel
-from llm_interface import OllamaProvider
+from llm_interface import LLMProvider, OllamaProvider
 from data_preprocessing import preprocess_roadmap_output
 
 logger = setup_logging()
@@ -25,12 +25,12 @@ def load_vector_store(file_path):
 
 
 @timeit
-def embed_user_data(embedding_model, user_data):
+def embed_user_data(embedding_model: EmbeddingModel, user_data):
     return embedding_model.embed(user_data)
 
 
 @timeit
-def search_relevant_rules(vector_store, user_vector):
+def search_relevant_rules(vector_store: VectorStore, user_vector):
     return vector_store.search(user_vector)
 
 
@@ -49,11 +49,10 @@ def main():
         logger.error(f"Error loading vector store: {e}")
         return
 
-    llm = OllamaProvider()
+    llm: LLMProvider = OllamaProvider()
 
-    # Preprocess Sandy Sample data
     try:
-        user_data = preprocess_roadmap_output("sandy_sample.json")
+        user_data: str = preprocess_roadmap_output("sandy_sample.json")
     except Exception as e:
         logger.error(f"Error preprocessing user data: {e}")
         return

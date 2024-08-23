@@ -108,3 +108,103 @@
 2024-08-22 10:01:01,123 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
 2024-08-22 10:01:01,126 - root - INFO - analyze_with_llm took 66.55 seconds
 2024-08-22 10:01:01,127 - root - INFO - Main function completed
+2024-08-22 13:17:34,115 - root - INFO - Starting main function
+2024-08-22 13:17:34,115 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 13:17:34,475 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 13:17:34,476 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 13:17:34,696 - root - INFO - embed_user_data took 0.22 seconds
+2024-08-22 13:17:34,696 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 13:17:34,701 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 13:18:16,738 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 13:18:16,739 - root - INFO - analyze_with_llm took 42.04 seconds
+2024-08-22 13:18:16,739 - root - INFO - Main function completed
+2024-08-22 13:18:30,158 - root - INFO - Starting main function
+2024-08-22 13:18:30,159 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 13:18:30,463 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 13:18:30,464 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 13:18:30,589 - root - INFO - embed_user_data took 0.12 seconds
+2024-08-22 13:18:30,589 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 13:18:30,594 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 13:19:09,768 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 13:19:09,769 - root - INFO - analyze_with_llm took 39.18 seconds
+2024-08-22 13:19:09,769 - root - INFO - Main function completed
+2024-08-22 13:19:30,899 - root - INFO - Starting main function
+2024-08-22 13:19:30,899 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 13:19:31,112 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 13:19:31,113 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 13:19:31,214 - root - INFO - embed_user_data took 0.10 seconds
+2024-08-22 13:19:31,214 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 13:19:31,219 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 13:20:33,998 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 13:20:33,999 - root - INFO - analyze_with_llm took 62.78 seconds
+2024-08-22 13:20:33,999 - root - INFO - Main function completed
+2024-08-22 13:21:11,661 - root - INFO - Starting main function
+2024-08-22 13:21:11,662 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 13:21:11,874 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 13:21:11,874 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 13:21:11,975 - root - INFO - embed_user_data took 0.10 seconds
+2024-08-22 13:21:11,975 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 13:21:11,981 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 13:21:52,509 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 13:21:52,510 - root - INFO - analyze_with_llm took 40.53 seconds
+2024-08-22 13:21:52,510 - root - INFO - Main function completed
+2024-08-22 13:22:57,704 - root - INFO - Starting main function
+2024-08-22 13:22:57,704 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 13:22:57,917 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 13:22:57,917 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 13:22:58,019 - root - INFO - embed_user_data took 0.10 seconds
+2024-08-22 13:22:58,019 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 13:22:58,024 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 13:23:48,585 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 13:23:48,586 - root - INFO - analyze_with_llm took 50.57 seconds
+2024-08-22 13:23:48,586 - root - INFO - Main function completed
+2024-08-22 14:48:07,252 - root - INFO - Starting main function
+2024-08-22 14:48:07,252 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 14:48:07,631 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 14:48:07,632 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 14:48:07,874 - root - INFO - embed_user_data took 0.24 seconds
+2024-08-22 14:48:07,874 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 14:48:07,880 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 14:48:40,502 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 14:48:40,503 - root - INFO - analyze_with_llm took 32.63 seconds
+2024-08-22 14:48:40,503 - root - INFO - Main function completed
+2024-08-22 14:56:21,101 - root - INFO - Starting main function
+2024-08-22 14:56:21,101 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 14:56:21,302 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 14:56:21,303 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 14:56:21,404 - root - INFO - embed_user_data took 0.10 seconds
+2024-08-22 14:56:21,405 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 14:56:21,410 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 14:57:04,771 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 14:57:04,772 - root - INFO - analyze_with_llm took 43.37 seconds
+2024-08-22 14:57:04,772 - root - INFO - Main function completed
+2024-08-22 15:50:26,698 - root - INFO - Starting main function
+2024-08-22 15:50:26,699 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 15:50:27,033 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 15:50:27,034 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 15:50:27,275 - root - INFO - embed_user_data took 0.24 seconds
+2024-08-22 15:50:27,275 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 15:50:27,280 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 15:51:14,518 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 15:51:14,520 - root - INFO - analyze_with_llm took 47.25 seconds
+2024-08-22 15:51:14,520 - root - INFO - Main function completed
+2024-08-22 15:51:54,564 - root - INFO - Starting main function
+2024-08-22 15:51:54,564 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 15:51:54,888 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 15:51:54,889 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 15:51:55,107 - root - INFO - embed_user_data took 0.22 seconds
+2024-08-22 15:51:55,107 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 15:51:55,113 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 15:52:40,169 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 15:52:40,169 - root - INFO - analyze_with_llm took 45.06 seconds
+2024-08-22 15:52:40,170 - root - INFO - Main function completed
+2024-08-22 22:15:40,635 - root - INFO - Starting main function
+2024-08-22 22:15:40,635 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-22 22:15:41,018 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2024-08-22 22:15:41,018 - root - INFO - load_vector_store took 0.00 seconds
+2024-08-22 22:15:41,249 - root - INFO - embed_user_data took 0.23 seconds
+2024-08-22 22:15:41,249 - root - INFO - search_relevant_rules took 0.00 seconds
+2024-08-22 22:15:41,255 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-08-22 22:16:41,793 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-08-22 22:16:41,797 - root - INFO - analyze_with_llm took 60.55 seconds
+2024-08-22 22:16:41,797 - root - INFO - Main function completed
