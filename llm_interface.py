@@ -3,6 +3,8 @@ from openai import OpenAI
 import anthropic
 import json
 import requests
+from dotenv import load_dotenv
+import os
 
 
 class LLMProvider(ABC):
@@ -12,7 +14,9 @@ class LLMProvider(ABC):
 
 
 class OpenAIProvider(LLMProvider):
-    def __init__(self, api_key):
+    def __init__(self):
+        load_dotenv()
+        api_key = os.getenv("OPEN_AI_KEY")
         self.client = OpenAI(api_key=api_key)
 
     def analyze(self, query, context):
