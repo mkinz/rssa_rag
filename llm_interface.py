@@ -65,7 +65,7 @@ class AnthropicProvider(LLMProvider):
 
 
 class OllamaProvider(LLMProvider):
-    def __init__(self, model="llama3.1"):
+    def __init__(self, model="mistral-nemo"):
         # def __init__(self, model="gemma2:9b"):
         self.model = model
         self.api_url = "http://localhost:11434/api/generate"
