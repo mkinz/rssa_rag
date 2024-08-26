@@ -25,4 +25,4 @@ def prepare_rule_text(rule_id, rule_text):
 
 
 if __name__ == "__main__":
-    ingest_and_store_rules("rules_vector_store.json", "rules_vector_store.ann")
+    ingest_and_store_rules("social_security_rules.json", "rules_vector_store")
