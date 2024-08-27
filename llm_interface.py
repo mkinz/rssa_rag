@@ -5,11 +5,12 @@ import json
 import requests
 from dotenv import load_dotenv
 import os
+from typing import Any
 
 
 class LLMProvider(ABC):
     @abstractmethod
-    def analyze(self, query: str, context: str) -> str | None:
+    def analyze(self, query: str, context: str) -> str | None | Any:
         pass
 
 
@@ -59,13 +60,18 @@ class AnthropicProvider(LLMProvider):
         3. Recommendations based on the analysis
         """
 
-        response = self.client.completions.create(
+        response = self.client.messages.create(
             model="claude-3-sonnet-20240229",
-            prompt=prompt,
             max_tokens=1000,
+            temperature=0,
+            system="You are a helpful assistant that analyzes social security data.",
+            messages=[{"role": "user", "content": prompt}],
         )
 
-        return response.completion
+        if response.content and len(response.content) > 0:
+            return response.content[0].text
+        else:
+            return "No content found in response"
 
 
 class OllamaProvider(LLMProvider):

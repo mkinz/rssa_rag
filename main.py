@@ -2,7 +2,7 @@ import time
 from logging_config import setup_logging
 from vector_store import VectorStore
 from embedding import EmbeddingModel
-from llm_interface import LLMProvider, OllamaProvider, OpenAIProvider
+from llm_interface import LLMProvider, OllamaProvider, OpenAIProvider, AnthropicProvider
 from data_preprocessing import preprocess_roadmap_output
 
 logger = setup_logging()
@@ -50,7 +50,9 @@ def main():
         return
 
     llm: LLMProvider = OpenAIProvider()
+    # llm: LLMProvider = AnthropicProvider()
 
+    logger.info(f"######### Using {llm} LLM #########")
     try:
         user_data: str = preprocess_roadmap_output("sandy_sample.json")
     except Exception as e:
