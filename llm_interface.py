@@ -16,8 +16,7 @@ class LLMProvider(ABC):
 class OpenAIProvider(LLMProvider):
     def __init__(self):
         load_dotenv()
-        api_key = os.getenv("OPEN_AI_KEY")
-        self.client = OpenAI(api_key=api_key)
+        self.client = OpenAI(api_key=os.getenv("OPEN_AI_KEY"))
 
     def analyze(self, query, context):
         prompt = f"""
@@ -45,8 +44,9 @@ class OpenAIProvider(LLMProvider):
 
 
 class AnthropicProvider(LLMProvider):
-    def __init__(self, api_key):
-        self.client = anthropic.Anthropic(api_key=api_key)
+    def __init__(self):
+        load_dotenv()
+        self.client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     def analyze(self, query, context):
         prompt = f"""
@@ -69,6 +69,11 @@ class AnthropicProvider(LLMProvider):
 
 
 class OllamaProvider(LLMProvider):
+    """
+    Note: Ollama server must be running locally before this will work.
+    commands: ollama serve
+    """
+
     def __init__(self, model="mistral-nemo"):
         # def __init__(self, model="gemma2:9b"):
         self.model = model
