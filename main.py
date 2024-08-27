@@ -49,10 +49,15 @@ def main():
         logger.error(f"Error loading vector store: {e}")
         return
 
-    llm: LLMProvider = OpenAIProvider()
-    # llm: LLMProvider = AnthropicProvider()
+    llm_stragegy = {
+        "openai": OpenAIProvider(),
+        "anthropic": AnthropicProvider(),
+        "ollama": OllamaProvider(),
+    }
 
-    logger.info(f"######### Using {llm} LLM #########")
+    llm: LLMProvider = llm_stragegy["openai"]
+
+    logger.info(f"Using {llm} LLM strategy")
     try:
         user_data: str = preprocess_roadmap_output("sandy_sample.json")
     except Exception as e:

@@ -22,7 +22,8 @@ class OpenAIProvider(LLMProvider):
     def analyze(self, query, context):
         prompt = f"""
         Analyze the following social security data and provide insights:
-        {context}
+        Context: {context}
+        Query: {query}
 
         Please provide:
         1. A summary of the data
