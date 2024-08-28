@@ -3,7 +3,7 @@ from logging_config import setup_logging
 from vector_store import VectorStore
 from embedding import EmbeddingModel
 from llm_interface import LLMProvider, OllamaProvider, OpenAIProvider, AnthropicProvider
-from data_preprocessing import preprocess_roadmap_output
+from ingest_roadmap_output import preprocess_roadmap_output
 
 logger = setup_logging()
 
