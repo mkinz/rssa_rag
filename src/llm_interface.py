@@ -22,6 +22,8 @@ class CohereAIProvider(LLMProvider):
 
     def analyze(self, query, context):
         prompt = f"""
+        You are a helpful assistant that analyzes social security data. Please do the following:
+
         Analyze the following social security data and provide insights:
         Context: {context}
         Query: {query}
@@ -32,18 +34,11 @@ class CohereAIProvider(LLMProvider):
         3. Recommendations based on the analysis
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a helpful assistant that analyzes social security data.",
-                },
-                {"role": "user", "content": prompt},
-            ],
+        response = self.client.chat(
+            message=prompt,
         )
 
-        return response.choices[0].message.content
+        return response.text
 
 
 class OpenAIProvider(LLMProvider):

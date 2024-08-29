@@ -2,7 +2,13 @@ import time
 from logging_config import setup_logging
 from vector_store import VectorStore
 from embedding import EmbeddingModel
-from llm_interface import LLMProvider, OllamaProvider, OpenAIProvider, AnthropicProvider
+from llm_interface import (
+    CohereAIProvider,
+    LLMProvider,
+    OllamaProvider,
+    OpenAIProvider,
+    AnthropicProvider,
+)
 from roadmap_output_ingestor import preprocess_roadmap_output
 
 logger = setup_logging()
@@ -53,9 +59,10 @@ def main():
         "openai": OpenAIProvider(),
         "anthropic": AnthropicProvider(),
         "ollama": OllamaProvider(),
+        "cohere": CohereAIProvider(),
     }
 
-    llm: LLMProvider = llm_stragegy["openai"]
+    llm: LLMProvider = llm_stragegy["cohere"]
 
     logger.info(f"Using {llm} LLM strategy")
     try:
