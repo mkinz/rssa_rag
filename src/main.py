@@ -62,7 +62,7 @@ def main():
         "cohere": CohereAIProvider(),
     }
 
-    llm: LLMProvider = llm_stragegy["cohere"]
+    llm: LLMProvider = llm_stragegy["openai"]
 
     logger.info(f"Using {llm} LLM strategy")
     try:

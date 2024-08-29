@@ -27,11 +27,6 @@ class CohereAIProvider(LLMProvider):
         Analyze the following social security data and provide insights:
         Context: {context}
         Query: {query}
-
-        Please provide:
-        1. A summary of the data
-        2. Key trends or patterns
-        3. Recommendations based on the analysis
         """
 
         response = self.client.chat(
@@ -51,11 +46,6 @@ class OpenAIProvider(LLMProvider):
         Analyze the following social security data and provide insights:
         Context: {context}
         Query: {query}
-
-        Please provide:
-        1. A summary of the data
-        2. Key trends or patterns
-        3. Recommendations based on the analysis
         """
 
         response = self.client.chat.completions.create(
@@ -121,11 +111,6 @@ class OllamaProvider(LLMProvider):
 
         Please analyze this data to answer the following query:
         {query}
-
-        Provide a detailed response including:
-        1. A summary of the relevant data
-        2. Key insights or patterns related to the query
-        3. Recommendations or conclusions based on the analysis
         """
 
         payload = {"model": self.model, "prompt": prompt, "stream": False}
