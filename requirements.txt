@@ -1,0 +1,7 @@
+annoy==1.17.3
+anthropic==0.34.1
+cohere==5.9.0
+openai==1.43.0
+python-dotenv==1.0.1
+Requests==2.32.3
+sentence_transformers==2.2.2
