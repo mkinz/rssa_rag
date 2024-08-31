@@ -1,0 +1,715 @@
+﻿{
+  "AgentUserID": "00000000-0000-0000-0000-000000000000",
+  "MaritalStatus": 2,
+  "Primary_FirstName": "Sandy",
+  "Primary_LastName": "Sample",
+  "Primary_GenderID": "F",
+  "Primary_BirthDate": "1965-01-20T00:00:00",
+  "Primary_Age": 62,
+  "Primary_Phone": "123-456-7890",
+  "Primary_Email": "Sandy@rssa.com",
+  "Primary_Blind": 0,
+  "Spouse_FirstName": "Steven",
+  "Spouse_LastName": "Sample",
+  "Spouse_GenderID": "M",
+  "Spouse_BirthDate": "1959-01-21T00:00:00",
+  "Spouse_Age": 63,
+  "Spouse_Phone": "456-789-1230",
+  "Spouse_Email": "Steven@rssa.com",
+  "Spouse_Blind": 0,
+  "Address": "123 Main Street",
+  "City": "Anywhere",
+  "State": "NE",
+  "Zip": 12345,
+  "DateCreated": "2022-07-25 19:14:53.100",
+  "CreatedBy": "00000000-0000-0000-0000-000000000000",
+  "DateModified": "2022-07-25 19:14:53.100",
+  "ModifiedBy": null,
+  "Active": 1,
+  "isComplete": 0,
+  "lastSnapshotId": 0,
+  "IsVerified": 0,
+  "DateVerified": null,
+  "AffiliateId": null,
+  "SSCalData": {
+    "Primary_Blind": 0,
+    "Primary_IsRemarried": 0,
+    "Primary_MarriedBefore60": 0,
+    "Primary_DivorceDate": null,
+    "Primary_MarriedOver10Years": 0,
+    "Primary_IsCollectingBenefits": 0,
+    "Primary_BenefitsStartDate": null,
+    "Primary_BenefitsAmount": null,
+    "Primary_HasPension": 0,
+    "Primary_HasChildren": 0,
+    "Primary_PenAmount": null,
+    "Primary_PenYearsWithSS": null,
+    "Primary_PenSalarySS": null,
+    "Primary_CalBasis": 0,
+    "Primary_LifeExpectancy": 88,
+    "Primary_LastYearEarningsAge": 62,
+    "Primary_AnualEarningRate": 60000,
+    "Primary_LastYearPartTimeEarningsAge": 0,
+    "Primary_AnualPartTimeEarningRate": 0,
+    "Primary_COLA": 0,
+    "Primary_DiscountRateNPV": 0.73,
+    "Primary_HowCalBenefits": 2,
+    "Primary_QEAvgSalary": null,
+    "Primary_QEYearsWorked": null,
+    "Primary_FRAYear": 804,
+    "Primary_FRA": "2027-01-19 00:00:00",
+    "Primary_FRAAge": 67,
+    "Primary_SSPIA": 0,
+    "Primary_SSEarning": 0,
+    "Primary_PIA": 2127.6,
+    "Primary_PIA62": 2055,
+    "Primary_PIA70": 2127.6,
+    "Primary_WEPBendRate": 0,
+    "Primary_EstRetirementAge": 0,
+    "Primary_IsDisabled": 0,
+    "Primary_EntitlementDate": null,
+    "Primary_DisabilityBenefit": null,
+    "Spouse_DeathDate": null,
+    "Spouse_Blind": 0,
+    "Spouse_IsCollectingBenefits": 0,
+    "Spouse_HasPension": 0,
+    "Spouse_PenAmount": null,
+    "Spouse_PenYearsWithSS": null,
+    "Spouse_PenSalarySS": null,
+    "Spouse_BenefitsStartDate": null,
+    "Spouse_BenefitAmount": null,
+    "Spouse_CalBasis": 0,
+    "Spouse_IsLiving": 1,
+    "Spouse_AnualIncome": null,
+    "Spouse_LifeExpectancy": 93,
+    "Spouse_LastYearEarningsAge": 65,
+    "Spouse_AnualEarningRate": 50000,
+    "Spouse_LastYearPartTimeEarningsAge": 0,
+    "Spouse_AnualPartTimeEarningRate": 0,
+    "Spouse_HowCalBenefits": 2,
+    "Spouse_QEAvgSalary": null,
+    "Spouse_QEYearsWorked": null,
+    "Spouse_FRAYear": 802,
+    "Spouse_FRA": "2025-11-20 00:00:00",
+    "Spouse_FRAAge": 66,
+    "Spouse_SSPIA": 0,
+    "Spouse_SSEarning": 0,
+    "Spouse_PIA": 2010.3,
+    "Spouse_PIA70": 2010.3,
+    "Spouse_PIA62": 1956.5,
+    "Spouse_WEPBendRate": 0,
+    "Spouse_EstRetirementAge": 0,
+    "Spouse_IsDisabled": 0,
+    "Spouse_EntitlementDate": null,
+    "Spouse_DisabilityBenefit": null,
+    "Primary_HasFullCoverage": false,
+    "Spouse_HasFullCoverage": false,
+    "Primary_IsSelfEmployed": false,
+    "Spouse_IsSelfEmployed": false,
+    "IsComplete": 0,
+    "DateCreated": "2022-07-25 19:14:53.100",
+    "CreatedBy": "00000000-0000-0000-0000-000000000000",
+    "DateModified": "2022-08-16 15:34:24.420",
+    "ModifiedBy": "00000000-0000-0000-0000-000000000000",
+    "Active": 1,
+    "LastStepId": 0,
+    "SSCalChildren": [],
+    "SSCalPensions": [],
+    "SSCalEarnings": [
+      {
+        "IsPrimary": 1,
+        "YearID": 2022,
+        "Earning": 60000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2021,
+        "Earning": 54489,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2020,
+        "Earning": 54489,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2019,
+        "Earning": 54559,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2018,
+        "Earning": 53966,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2017,
+        "Earning": 53251,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2016,
+        "Earning": 52108,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2015,
+        "Earning": 51996,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2014,
+        "Earning": 50605,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2013,
+        "Earning": 49095,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2012,
+        "Earning": 48560,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2011,
+        "Earning": 47093,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2010,
+        "Earning": 45666,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2009,
+        "Earning": 44603,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2008,
+        "Earning": 45170,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2007,
+        "Earning": 43971,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2006,
+        "Earning": 41829,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2005,
+        "Earning": 39711,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2004,
+        "Earning": 38032,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2003,
+        "Earning": 36021,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2002,
+        "Earning": 34846,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2001,
+        "Earning": 34147,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 2000,
+        "Earning": 32857,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1999,
+        "Earning": 30738,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1998,
+        "Earning": 28688,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1997,
+        "Earning": 26805,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1996,
+        "Earning": 24848,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1995,
+        "Earning": 23158,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1994,
+        "Earning": 21721,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1993,
+        "Earning": 20560,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1992,
+        "Earning": 19722,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1991,
+        "Earning": 18006,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1990,
+        "Earning": 16114,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1989,
+        "Earning": 14491,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1988,
+        "Earning": 12944,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1987,
+        "Earning": 11273,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1986,
+        "Earning": 9503,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1985,
+        "Earning": 8068,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1984,
+        "Earning": 6337,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1983,
+        "Earning": 4523,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1982,
+        "Earning": 3343,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1981,
+        "Earning": 2411,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1980,
+        "Earning": 1163,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1979,
+        "Earning": 641,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1978,
+        "Earning": 344,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1977,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1976,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 1,
+        "YearID": 1975,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2024,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2023,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2022,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2021,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2020,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2019,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2018,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2017,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2016,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2015,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2014,
+        "Earning": 50000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2013,
+        "Earning": 49000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2012,
+        "Earning": 48000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2011,
+        "Earning": 47000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2010,
+        "Earning": 46000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2009,
+        "Earning": 44000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2008,
+        "Earning": 45000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2007,
+        "Earning": 43000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2006,
+        "Earning": 42000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2005,
+        "Earning": 40000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2004,
+        "Earning": 38000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2003,
+        "Earning": 36000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2002,
+        "Earning": 35000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2001,
+        "Earning": 34000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 2000,
+        "Earning": 32000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1999,
+        "Earning": 31000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1998,
+        "Earning": 29000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1997,
+        "Earning": 26000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1996,
+        "Earning": 25000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1995,
+        "Earning": 23000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1994,
+        "Earning": 22000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1993,
+        "Earning": 20000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1992,
+        "Earning": 19000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1991,
+        "Earning": 18000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1990,
+        "Earning": 16000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1989,
+        "Earning": 14000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1988,
+        "Earning": 13000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1987,
+        "Earning": 10000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1986,
+        "Earning": 9503,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1985,
+        "Earning": 7000,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1984,
+        "Earning": 6500,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1983,
+        "Earning": 4500,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1982,
+        "Earning": 3500,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1981,
+        "Earning": 2500,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1980,
+        "Earning": 1100,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1979,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1978,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1977,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1976,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1975,
+        "Earning": 0,
+        "IsAssumed": 0
+      },
+      {
+        "IsPrimary": 0,
+        "YearID": 1974,
+        "Earning": 0,
+        "IsAssumed": 0
+      }
+    ]
+  }
+}
