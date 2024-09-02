@@ -50,7 +50,7 @@ def main():
 
     embedding_model = EmbeddingModel()
     try:
-        vector_store = load_vector_store("rules_vector_store")
+        vector_store = load_vector_store("src/rules_vector_store")
     except FileNotFoundError as e:
         logger.error(f"Error loading vector store: {e}")
         return
@@ -66,7 +66,7 @@ def main():
 
     logger.info(f"Using {llm} LLM strategy")
     try:
-        user_data: str = preprocess_roadmap_output("sandy_sample.json")
+        user_data: str = preprocess_roadmap_output("src/sandy_sample.json")
     except Exception as e:
         logger.error(f"Error preprocessing user data: {e}")
         return
