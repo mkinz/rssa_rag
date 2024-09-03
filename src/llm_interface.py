@@ -43,6 +43,8 @@ class OpenAIProvider(LLMProvider):
 
     def analyze(self, query, context):
         prompt = f"""
+        You are a helpful assistant that analyzes social security data. Please do the following:
+
         Analyze the following social security data and provide insights:
         Context: {context}
         Query: {query}
@@ -69,13 +71,11 @@ class AnthropicProvider(LLMProvider):
 
     def analyze(self, query, context):
         prompt = f"""
-        Analyze the following social security data and provide insights:
-        {context}
+        You are a helpful assistant that analyzes social security data. Please do the following:
 
-        Please provide:
-        1. A summary of the data
-        2. Key trends or patterns
-        3. Recommendations based on the analysis
+        Analyze the following social security data and provide insights:
+        Context: {context}
+        Query: {query}
         """
 
         response = self.client.messages.create(
@@ -106,11 +106,11 @@ class OllamaProvider(LLMProvider):
 
     def analyze(self, query, context):
         prompt = f"""
-        Given the following context about social security data:
-        {context}
+        You are a helpful assistant that analyzes social security data. Please do the following:
 
-        Please analyze this data to answer the following query:
-        {query}
+        Analyze the following social security data and provide insights:
+        Context: {context}
+        Query: {query}
         """
 
         payload = {"model": self.model, "prompt": prompt, "stream": False}
