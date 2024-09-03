@@ -62,11 +62,11 @@ def main():
         "cohere": CohereAIProvider(),
     }
 
-    llm: LLMProvider = llm_stragegy["cohere"]
+    llm: LLMProvider = llm_stragegy["openai"]
 
-    logger.info(f"Using {llm} LLM strategy")
+    logger.info(f"Using {llm}")
     try:
-        user_data: str = preprocess_roadmap_output("client-exports/norton.json")
+        user_data: str = preprocess_roadmap_output("client-exports/worker_worker.json")
     except Exception as e:
         logger.error(f"Error preprocessing user data: {e}")
         return
@@ -83,7 +83,8 @@ def main():
     2. An analysis of their estimated Social Security benefits, including any spousal benefits they might be eligible for.
     3. Recommendations for optimizing their Social Security benefits as a couple.
     4. Any additional insights or considerations based on their specific situation, including the age difference between the spouses and their respective earnings histories.
-    5. Note any specific rules that you are referencing in your analysis.
+    5. Any insights related to their dependents, if any.
+    6. Note any specific rules that you are referencing in your analysis.
     """
 
     analysis_result = analyze_with_llm(llm, query, context)
