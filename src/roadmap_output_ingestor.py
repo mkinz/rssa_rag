@@ -304,37 +304,41 @@ Real Rate of Return: {settings['RealRateOfReturn']}%"""
 
 
 def preprocess_roadmap_output(file_path):
-    with open(file_path, "r", encoding="utf-8-sig") as f:
-        raw_data = json.load(f)
+    try:
+        with open(file_path, "r", encoding="utf-8-sig") as f:
+            raw_data = json.load(f)
 
-    # Extract primary and spouse information
-    family = {}
-    primary = get_primary(raw_data=raw_data)
-    family["primary"] = primary
+        # Extract primary and spouse information
+        family = {}
+        primary = get_primary(raw_data=raw_data)
+        family["primary"] = primary
 
-    if raw_data["data"]["Spouse_FirstName"]:
-        spouse = get_spouse(raw_data=raw_data)
-        family["spouse"] = spouse
+        if raw_data["data"]["Spouse_FirstName"]:
+            spouse = get_spouse(raw_data=raw_data)
+            family["spouse"] = spouse
 
-    if raw_data["data"]["SSCalData"]["SSCalChildren"]:
-        children = get_children(raw_data=raw_data)
-        family["children"] = children
+        if raw_data["data"]["SSCalData"]["SSCalChildren"]:
+            children = get_children(raw_data=raw_data)
+            family["children"] = children
 
-    # Format the preprocessed data
-    if "spouse" not in family.keys():
-        result = preprocess_data_primary_only(
-            raw_data=raw_data, primary=family["primary"]
-        )
-    else:
-        result = preprocess_data_primary_and_spouse(
-            raw_data=raw_data, primary=family["primary"], spouse=family["spouse"]
-        )
+        # Format the preprocessed data
+        if "spouse" not in family.keys():
+            result = preprocess_data_primary_only(
+                raw_data=raw_data, primary=family["primary"]
+            )
+        else:
+            result = preprocess_data_primary_and_spouse(
+                raw_data=raw_data, primary=family["primary"], spouse=family["spouse"]
+            )
 
-    return result
+        return result
+    except Exception as e:
+        print(f"an exception occured: {e}")
+        return
 
 
 # Example usage
 if __name__ == "__main__":
-    file_path = "client-exports/hall_munster.json"
+    file_path = "client-exports/daniels_uphill.json"
     preprocessed_data = preprocess_roadmap_output(file_path)
     print(preprocessed_data)

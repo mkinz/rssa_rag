@@ -62,11 +62,11 @@ def main():
         "cohere": CohereAIProvider(),
     }
 
-    llm: LLMProvider = llm_stragegy["openai"]
+    llm: LLMProvider = llm_stragegy["cohere"]
 
     logger.info(f"Using {llm}")
     try:
-        user_data: str = preprocess_roadmap_output("client-exports/worker_worker.json")
+        user_data: str = preprocess_roadmap_output("client-exports/hall_munster.json")
     except Exception as e:
         logger.error(f"Error preprocessing user data: {e}")
         return
@@ -85,6 +85,8 @@ def main():
     4. Any additional insights or considerations based on their specific situation, including the age difference between the spouses and their respective earnings histories.
     5. Any insights related to their dependents, if any.
     6. Note any specific rules that you are referencing in your analysis.
+
+    Please ensure that your answer is formatted in HTML, so it can be displayed on a web page.
     """
 
     analysis_result = analyze_with_llm(llm, query, context)
