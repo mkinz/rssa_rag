@@ -1,5 +1,6 @@
 import time
 from logging_config import setup_logging
+from valid_html import NotValidHTMLException, validate_llm_html
 from vector_store import VectorStore
 from embedding import EmbeddingModel
 from llm_interface import (
@@ -62,7 +63,7 @@ def main():
         "cohere": CohereAIProvider(),
     }
 
-    llm: LLMProvider = llm_stragegy["cohere"]
+    llm: LLMProvider = llm_stragegy["openai"]
 
     logger.info(f"Using {llm}")
     try:
@@ -90,9 +91,13 @@ def main():
     """
 
     analysis_result = analyze_with_llm(llm, query, context)
+    try:
+        validate_llm_html(analysis_result)
+        logger.info("HTML was validated!")
+        print(analysis_result)
 
-    print("Analysis Results:")
-    print(analysis_result)
+    except NotValidHTMLException:
+        logger.error("HTML Validation failed. LLM returned invalid html.")
 
     logger.info("Main function completed")
 

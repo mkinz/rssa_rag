@@ -303,7 +303,7 @@ Nominal Rate of Return: {settings['NominalRateOfReturn']}%
 Real Rate of Return: {settings['RealRateOfReturn']}%"""
 
 
-def preprocess_roadmap_output(file_path):
+def preprocess_roadmap_output(file_path) -> str | None:
     try:
         with open(file_path, "r", encoding="utf-8-sig") as f:
             raw_data = json.load(f)
