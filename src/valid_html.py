@@ -68,7 +68,7 @@ def validate_llm_html(html_string):
         if not is_valid:
             raise NotValidHTMLException(msg)
 
-    return True
+    return True, "HTML is valid."
 
 
 # Example usage

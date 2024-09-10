@@ -87,17 +87,17 @@ def main():
     5. Any insights related to their dependents, if any.
     6. Note any specific rules that you are referencing in your analysis.
 
-    Please ensure that your answer is formatted in HTML, so it can be displayed on a web page.
-    """
+    Please ensure that your answer is formatted in valid HTML, so that it can be displayed as is on a web page. It should be a standalone file with all necessary html tags."""
 
     analysis_result = analyze_with_llm(llm, query, context)
-    try:
-        validate_llm_html(analysis_result)
-        logger.info("HTML was validated!")
-        print(analysis_result)
+    validated: tuple = validate_llm_html(analysis_result)
 
-    except NotValidHTMLException:
+    if validated[0] is True:
+        logger.info("HTML was validated!")
+    else:
         logger.error("HTML Validation failed. LLM returned invalid html.")
+        logger.error(validated[1])
+    print(analysis_result)
 
     logger.info("Main function completed")
 
