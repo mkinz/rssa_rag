@@ -97,7 +97,7 @@ def main():
     else:
         logger.error("HTML Validation failed. LLM returned invalid html.")
         logger.error(validated[1])
-    print(analysis_result)
+    logger.debug(analysis_result)
 
     logger.info("Main function completed")
 
