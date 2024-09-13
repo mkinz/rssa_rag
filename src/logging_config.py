@@ -8,7 +8,7 @@ def setup_logging(log_file="app.log"):
 
     # Console handler
     console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.DEBUG)
+    console_handler.setLevel(logging.INFO)
 
     # File handler
     file_handler = RotatingFileHandler(

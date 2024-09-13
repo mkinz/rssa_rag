@@ -49,13 +49,6 @@ def analyze_with_llm(llm, query, context):
 def main():
     logger.info("Starting main function")
 
-    embedding_model = EmbeddingModel()
-    try:
-        vector_store = load_vector_store("rules_vector_store")
-    except FileNotFoundError as e:
-        logger.error(f"Error loading vector store: {e}")
-        return
-
     llm_stragegy = {
         "openai": OpenAIProvider(),
         "anthropic": AnthropicProvider(),
@@ -66,18 +59,36 @@ def main():
     llm: LLMProvider = llm_stragegy["openai"]
 
     logger.info(f"Using {llm}")
+
     try:
-        user_data: str = preprocess_roadmap_output("client-exports/hall_munster.json")
+        user_data: str = preprocess_roadmap_output("client-exports/norton.json")
     except Exception as e:
         logger.error(f"Error preprocessing user data: {e}")
         return
 
-    user_vector = embed_user_data(embedding_model, user_data)
-    relevant_rules = search_relevant_rules(vector_store, user_vector)
+    """
+    # The following code block is used to create the elements needed for RAG:
+    # embedding model, vector_store, user_vector, relevant_rules.
+    # The vector_store is generated using the rules_ingestor.py script along with a rules.json file.
+
+    embedding_model = EmbeddingModel()
+
+    try:
+        vector_store = load_vector_store("rules_vector_store")
+    except FileNotFoundError as e:
+        logger.error(f"Error loading vector store: {e}")
+        return
+
+     user_vector = embed_user_data(embedding_model, user_data)
+     relevant_rules = search_relevant_rules(vector_store, user_vector)
 
     context = f"User Data:\n{user_data}\n\nRelevant Rules:\n" + "\n\n".join(
         relevant_rules
     )
+    """
+
+    context = f"User Data:\n{user_data}\n"
+
     query = """
     Based on the provided user data for both the primary beneficiary and spouse, and the relevant Social Security rules, please provide:
     1. A summary of both individuals' work history and earnings.
@@ -87,7 +98,7 @@ def main():
     5. Any insights related to their dependents, if any.
     6. Note any specific rules that you are referencing in your analysis.
 
-    Please ensure that your answer is formatted in valid HTML, so that it can be displayed as is on a web page. It should be a standalone file with all necessary html tags."""
+    """
 
     analysis_result = analyze_with_llm(llm, query, context)
     validated: tuple = validate_llm_html(analysis_result)
@@ -97,7 +108,7 @@ def main():
     else:
         logger.error("HTML Validation failed. LLM returned invalid html.")
         logger.error(validated[1])
-    logger.debug(analysis_result)
+    logger.info(analysis_result)
 
     logger.info("Main function completed")
 
