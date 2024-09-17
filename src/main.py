@@ -61,7 +61,7 @@ def main():
     logger.info(f"Using {llm}")
 
     try:
-        user_data: str = preprocess_roadmap_output("client-exports/norton.json")
+        user_data: str = preprocess_roadmap_output("client-exports/smith_smith.json")
     except Exception as e:
         logger.error(f"Error preprocessing user data: {e}")
         return
@@ -91,13 +91,14 @@ def main():
 
     query = """
     Based on the provided user data for both the primary beneficiary and spouse, and the relevant Social Security rules, please provide:
-    1. A summary of both individuals' work history and earnings.
+    1. A summary of both individuals' work history and earnings in the form of a table with five columns: individual, total years worked, total lifetime earnings, primary insurance amount, and average annual earnings.
     2. An analysis of their estimated Social Security benefits, including any spousal benefits they might be eligible for.
-    3. Recommendations for optimizing their Social Security benefits as a couple.
-    4. Any additional insights or considerations based on their specific situation, including the age difference between the spouses and their respective earnings histories.
-    5. Any insights related to their dependents, if any.
+    3. Recommendations for optimizing their Social Security benefits as a couple. Be extremely detailed whenever possible, including referencing the source of your information. If you are recommending strategies, please detail them in procedural form so that they can be followed easily.
+    4. Any insights related to their dependents, if any.
     6. Note any specific rules that you are referencing in your analysis.
 
+    Please ensure that the output is in proper HTML, so that the output can be displayed as a web page.
+    The output should have all elements needed so that it could be displayed correctly by any modern browser.
     """
 
     analysis_result = analyze_with_llm(llm, query, context)
