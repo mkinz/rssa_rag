@@ -61,7 +61,9 @@ def main():
     logger.info(f"Using {llm}")
 
     try:
-        user_data: str = preprocess_roadmap_output("client-exports/smith_smith.json")
+        user_data: str = preprocess_roadmap_output(
+            "src/client-exports/smith_smith.json"
+        )
     except Exception as e:
         logger.error(f"Error preprocessing user data: {e}")
         return
