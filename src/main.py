@@ -68,7 +68,6 @@ def main():
         logger.error(f"Error preprocessing user data: {e}")
         return
 
-    """
     # The following code block is used to create the elements needed for RAG:
     # embedding model, vector_store, user_vector, relevant_rules.
     # The vector_store is generated using the rules_ingestor.py script along with a rules.json file.
@@ -76,20 +75,19 @@ def main():
     embedding_model = EmbeddingModel()
 
     try:
-        vector_store = load_vector_store("rules_vector_store")
+        vector_store = load_vector_store("src/rules_vector_store")
     except FileNotFoundError as e:
         logger.error(f"Error loading vector store: {e}")
         return
 
-     user_vector = embed_user_data(embedding_model, user_data)
-     relevant_rules = search_relevant_rules(vector_store, user_vector)
+    user_vector = embed_user_data(embedding_model, user_data)
+    relevant_rules = search_relevant_rules(vector_store, user_vector)
 
     context = f"User Data:\n{user_data}\n\nRelevant Rules:\n" + "\n\n".join(
         relevant_rules
     )
-    """
 
-    context = f"User Data:\n{user_data}\n"
+    # context = f"User Data:\n{user_data}\n"
 
     query = """
     Based on the provided user data for both the primary beneficiary and spouse, and the relevant Social Security rules, please provide:
