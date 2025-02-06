@@ -39,7 +39,7 @@ class CohereAIProvider(LLMProvider):
 class OpenAIProvider(LLMProvider):
     def __init__(self):
         load_dotenv()
-        self.client = OpenAI(api_key=os.getenv("OPEN_AI_KEY"))
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     def analyze(self, query, context):
         prompt = f"""

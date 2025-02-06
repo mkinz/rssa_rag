@@ -51,9 +51,6 @@ def main():
 
     llm_stragegy = {
         "openai": OpenAIProvider(),
-        "anthropic": AnthropicProvider(),
-        "ollama": OllamaProvider(),
-        "cohere": CohereAIProvider(),
     }
 
     llm: LLMProvider = llm_stragegy["openai"]
